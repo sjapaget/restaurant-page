@@ -1,0 +1,56 @@
+{
+  "menu": [
+    {
+      "category": "starters",
+      "items": [
+        {
+          "name": "Pea Soup",
+          "price": 500
+        },
+        {
+          "name": "Mozzarella Sticks",
+          "price": 600
+        }
+      ]
+    },
+    {
+      "category": "mains",
+      "items": [
+        {
+          "name": "Tartiflette",
+          "price": 1200
+        },
+        {
+          "name": "Carbonara",
+          "price": 1300
+        }
+      ]
+    },
+    {
+      "category": "desserts",
+      "items": [
+        {
+          "name": "Raspberry Cheesecake",
+          "price": 700
+        },
+        {
+          "name": "Sticky Toffee Pudding",
+          "price": 600
+        }
+      ]
+    },
+    {
+      "category": "drinks",
+      "items": [
+        {
+          "name": "Red Wine",
+          "price": 500
+        },
+        {
+          "name": "Lemonade",
+          "price": 200
+        }
+      ]
+    }
+  ]
+}

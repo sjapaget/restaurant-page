@@ -1,5 +1,6 @@
 import './tabs.css';
 import welcomeComponent from "../welcome/welcome.js";
+import menuComponent from '../menu/menu.js';
 
 import 'animate.css';
 
@@ -15,7 +16,7 @@ export default function tabComponent() {
   tabsContainer.appendChild(tabsBtnRow);
 
   const tabContent = document.createElement('article');
-    tabContent.appendChild(welcomeComponent())
+    tabContent.appendChild(menuComponent())
 
   tabsContainer.appendChild(tabContent);
 
