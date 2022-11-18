@@ -1,0 +1,11 @@
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+}
+
+.nav__title {
+  font-size: 1.5rem;
+}
+

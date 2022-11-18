@@ -1,0 +1,19 @@
+.content__welcome-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content__welcome-title {
+  color: var(--text-color);
+}
+
+.content__welcome-tagline {
+  color: var(--text-color);
+}
+
+.content__welcome-img {
+  border-radius: 30px;
+  max-width: 35vw;
+}
