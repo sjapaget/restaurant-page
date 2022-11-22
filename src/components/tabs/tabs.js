@@ -8,28 +8,48 @@ export default function tabComponent() {
   const tabsContainer = document.createElement('div');
     tabsContainer.classList.add('tabs__container');
 
-  const tabsBtnRow = document.createElement('div');
+    const tabContent = document.createElement('article');
+
+    const welcome  = welcomeComponent();
+    const menu = menuComponent();
+
+    const tabElements = [welcome, menu];
+
+    tabContent.appendChild(welcome);
+
+    menu.style.display = "none";
+    tabContent.appendChild(menu);
+
+
+
+    const tabsBtnRow = document.createElement('div');
     tabsBtnRow.classList.add('tabs__btn-row');
-    tabsBtnRow.appendChild(tabButton("Welcome"));
-    tabsBtnRow.appendChild(tabButton("Menu"));
-    tabsBtnRow.appendChild(tabButton("Contact"));
-  tabsContainer.appendChild(tabsBtnRow);
+    tabsBtnRow.appendChild(tabButton("Welcome", tabElements));
+    tabsBtnRow.appendChild(tabButton("Menu", tabElements));
+    // tabsBtnRow.appendChild(tabButton("Contact", contact));
 
-  const tabContent = document.createElement('article');
-    tabContent.appendChild(menuComponent())
-
-  tabsContainer.appendChild(tabContent);
+    tabsContainer.appendChild(tabsBtnRow);
+    tabsContainer.appendChild(tabContent);
 
   return tabsContainer
 }
 
-function tabButton(btnText) {
+function tabButton(btnText, tabElements) {
   const btn = document.createElement('button');
     btn.innerText = btnText;
     btn.classList.add('tabs__btn')
 
-    btn.onclick = () => {
+    btn.onclick = (event) => {
+      switch(event.target.innerText) {
+        case "Welcome":
+          tabElements[0].style.display = "flex";
+          tabElements[1].style.display = "none";
+          break;
+          case "Menu":
+          tabElements[0].style.display = "none";
+          tabElements[1].style.display = "block";
 
+      }
     }
 
     btn.onmouseenter = () => {

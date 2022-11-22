@@ -23,6 +23,10 @@
         {
           "name": "Carbonara",
           "price": 1300
+        },
+        {
+          "name": "Lentil Dhal",
+          "price": 1300
         }
       ]
     },
